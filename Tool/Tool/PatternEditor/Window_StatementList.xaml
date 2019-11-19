@@ -1,0 +1,16 @@
+﻿<Window x:Class="Tool.PatternEditor.Window_StatementList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tool.PatternEditor"
+        mc:Ignorable="d"
+        
+        Title="Statement List" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen"
+        Closing="onClosing_Window_StatementList"
+        Closed="onClosed_Window_StatementList">
+    <Grid>
+        <ListBox x:Name="ListBox_StatementList" Width="300.0" Background="LightPink">
+        </ListBox>
+    </Grid>
+</Window>

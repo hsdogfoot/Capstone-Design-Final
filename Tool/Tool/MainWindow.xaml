@@ -1,0 +1,232 @@
+﻿<Window x:Class="Tool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tool"
+        mc:Ignorable="d"
+        
+        Title="Capstone Design Game Tool" Width="1600.0" Height="900.0"
+        MouseDown="onMouseDown_Window_Main"
+        Loaded="onLoaded_Window_Main"
+        Closed="onClosed_Window_Main">
+    <Grid Background="LightGray">
+        <TabControl>
+            <TabItem Header="장면 편집기">
+                <Border BorderBrush="DarkGray" BorderThickness="1.0">
+                    <Grid Background="AliceBlue" ShowGridLines="False">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2.0*"/>
+                            <RowDefinition Height="0.62*"/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" Width="740.0" Height="590.0" Background="#FF91CCF1" BorderBrush="Black" BorderThickness="4.0" CornerRadius="2.0"
+                              HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Grid ShowGridLines="False">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="545.0"/>
+                                    <RowDefinition Height="1*"/>
+                                </Grid.RowDefinitions>
+                                <Border x:Name="Border_GamePreview" Grid.Row="0" Width="720.0" Height="540.0" Margin="0.0,5.0,0.0,0.0" Background="#FF004771" BorderBrush="Black" BorderThickness="4.0" CornerRadius="2.0"
+                                        HorizontalAlignment="Center" VerticalAlignment="Top">
+                                </Border>
+                                <StackPanel Grid.Row="1" VerticalAlignment="Center">
+                                    <Border x:Name="Border_PlayPreview" Width="50.0" Height="30.0" Margin="0.0" Background="#FFAABACC" BorderBrush="Black" BorderThickness="3.0" CornerRadius="4.0" MouseLeftButtonUp="onMouseLeftButtonUp_Border_PlayPreview" Cursor="Hand"
+                                            HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    </Border>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                        <Border Grid.Row="0" Width="250.0" Height="50.0" Margin="0.0,30.0,30.0,0.0" Background="White" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0"
+                                HorizontalAlignment="Right" VerticalAlignment="Top">
+                            <TextBox x:Name="TextBox_SceneName" Margin="5.0" Background="Transparent" BorderThickness="0.0" FontSize="20" FontWeight="Bold"
+                                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        </Border>
+                        <DockPanel Grid.Row="0" LastChildFill="False">
+                            <StackPanel DockPanel.Dock="Top" Height="150.0" Margin="0.0,5.0,0.0,5.0" Orientation="Horizontal">
+                                <Border x:Name="Border_AddSceneFile" MouseEnter="onMouseEnter_Border_SceneEditorButtons" MouseLeave="onMouseLeave_Border_SceneEditorButtons" MouseLeftButtonDown="onMouseLeftButtonDown_Border_SceneEditorButtons" MouseLeftButtonUp="onMouseLeftButtonUp_Border_AddSceneFile" Cursor="Hand"
+                                    Width="120.0" Height="120.0" Margin="25.0,0.0,0.0,0.0" Background="White" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0"
+                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <Border x:Name="Border_SaveSceneFile" MouseEnter="onMouseEnter_Border_SceneEditorButtons" MouseLeave="onMouseLeave_Border_SceneEditorButtons" MouseLeftButtonDown="onMouseLeftButtonDown_Border_SceneEditorButtons" MouseLeftButtonUp="onMouseLeftButtonUp_Border_SaveSceneFile" Cursor="Hand"
+                                    Width="120.0" Height="120.0" Margin="25.0,0.0,0.0,0.0" Background="White" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0"
+                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel DockPanel.Dock="Top" Height="150.0" Margin="0.0,5.0,0.0,5.0" Orientation="Horizontal">
+                                <Border x:Name="Border_OpenSceneFile" MouseEnter="onMouseEnter_Border_SceneEditorButtons" MouseLeave="onMouseLeave_Border_SceneEditorButtons" MouseLeftButtonDown="onMouseLeftButtonDown_Border_SceneEditorButtons" Cursor="Hand"
+                                    Width="120.0" Height="120.0" Margin="25.0,0.0,0.0,0.0" Background="White" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0"
+                                    HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                <Border x:Name="Test" MouseEnter="onMouseEnter_Border_SceneEditorButtons" MouseLeave="onMouseLeave_Border_SceneEditorButtons" MouseLeftButtonDown="onMouseLeftButtonDown_Border_SceneEditorButtons" Cursor="Hand"
+                                    Width="120.0" Height="120.0" Margin="25.0,0.0,0.0,0.0" Background="White" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0"
+                                    HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                            </StackPanel>
+                        </DockPanel>
+                        <Border Grid.Row="1" BorderBrush="DarkGray" BorderThickness="0.0,1.0,0.0,0.0">
+                            <Border Margin="0.0,2.0,0.0,0.0" BorderBrush="DarkGray" BorderThickness="0.0,1.0,0.0,0.0">
+                                <ScrollViewer Grid.Row="1" Background="Snow">
+                                    <WrapPanel x:Name="WrapPanel_SceneEditor_PrefabList" Grid.Row="1" Loaded="onLoaded_WrapPanel_SceneEditor_PrefabList" Margin="0.0,25.0,0.0,0.0"/>
+                                </ScrollViewer>
+                            </Border>
+                        </Border>
+                    </Grid>
+                </Border>
+            </TabItem>
+            <TabItem Header="프리팹 편집기">
+                <Border BorderBrush="DarkGray" BorderThickness="1.0">
+                    <Grid Background="#FFD0FFA2" ShowGridLines="False">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2.0*"/>
+                            <RowDefinition Height="1.5*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" ShowGridLines="False">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.0*"/>
+                                <ColumnDefinition Width="2.0*"/>
+                                <ColumnDefinition Width="1.0*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid x:Name="Grid_PrefabEditor" Grid.Row="0" Grid.Column="1" Background="Transparent" ShowGridLines="False" Visibility="Hidden">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="275.0"/>
+                                    <RowDefinition Height="1.0*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="275.0"/>
+                                    <ColumnDefinition Width="1.0*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border x:Name="Border_PrefabImage" Grid.Row="0" Grid.Column="0" Margin="25.0" Background="White" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0"/>
+                                <Border Grid.Row="0" Grid.Column="1" Margin="0.0,25.0,25.0,25.0" Background="White" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0">
+                                    <Grid x:Name="Grid_PrefabTransform" Visibility="Hidden" ShowGridLines="False">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="15.0"/>
+                                            <RowDefinition Height="1.0*"/>
+                                            <RowDefinition Height="1.0*"/>
+                                            <RowDefinition Height="1.0*"/>
+                                            <RowDefinition Height="1.0*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1.0*"/>
+                                            <ColumnDefinition Width="1.0*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <DockPanel Grid.Row="1" Grid.Column="0" LastChildFill="False">
+                                            <TextBlock DockPanel.Dock="Left" Margin="35.0,5.0,0.0,0.0"
+                                                       Text="X" FontSize="20.0" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center"/>
+                                            <Border DockPanel.Dock="Right" Width="160.0" Margin="0.0,0.0,10.0,15.0" Background="White" BorderBrush="Black" BorderThickness="3.5" CornerRadius="3.0">
+                                                <TextBox x:Name="TextBox_PrefabScaleX" Margin="5.0" Background="Transparent" BorderThickness="0.0" FontSize="14" FontWeight="Normal"
+                                                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                            </Border>
+                                        </DockPanel>
+                                        <DockPanel Grid.Row="1" Grid.Column="1" LastChildFill="False">
+                                            <TextBlock DockPanel.Dock="Left" Margin="25.0,5.0,0.0,0.0"
+                                                       Text="Y" FontSize="20.0" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center"/>
+                                            <Border DockPanel.Dock="Right" Width="160.0" Margin="0.0,0.0,20.0,15.0" Background="White" BorderBrush="Black" BorderThickness="3.5" CornerRadius="3.0">
+                                                <TextBox x:Name="TextBox_PrefabScaleY" Margin="5.0" Background="Transparent" BorderThickness="0.0" FontSize="14" FontWeight="Normal"
+                                                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                            </Border>
+                                        </DockPanel>
+                                        <Border x:Name="Border_LeftRightSwap" Grid.Row="2" Grid.Column="0" MouseEnter="onMouseEnter_Border_LeftRightSwap" MouseLeave="onMouseLeave_Border_LeftRightSwap" MouseLeftButtonDown="onMouseLeftButtonDown_Border_LeftRightSwap"
+                                                Margin="20.0,0.0,10.0,15.0" Background="Gainsboro" BorderThickness="0.0" CornerRadius="5.0">
+                                            <TextBlock Text="좌우 뒤집기" FontSize="16.0" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                                        </Border>
+                                        <Border x:Name="Border_TopDownSwap" Grid.Row="2" Grid.Column="1" MouseEnter="onMouseEnter_Border_TopDownSwap" MouseLeave="onMouseLeave_Border_TopDownSwap" MouseLeftButtonDown="onMouseLeftButtonDown_Border_TopDownSwap"
+                                                Margin="10.0,0.0,20.0,15.0" Background="Gainsboro" BorderThickness="0.0" CornerRadius="5.0">
+                                            <TextBlock Text="상하 뒤집기" FontSize="16.0" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                                        </Border>
+                                        <Border x:Name="Border_Left90" Grid.Row="3" Grid.Column="0" MouseEnter="onMouseEnter_Border_Left90" MouseLeave="onMouseLeave_Border_Left90" MouseLeftButtonDown="onMouseLeftButtonDown_Border_Left90"
+                                                Margin="20.0,0.0,10.0,15.0" Background="Gainsboro" BorderThickness="0.0" CornerRadius="5.0">
+                                            <TextBlock Text="왼쪽으로 90&#x00B0; 돌리기" FontSize="16.0" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                                        </Border>
+                                        <Border x:Name="Border_Right90" Grid.Row="3" Grid.Column="1" MouseEnter="onMouseEnter_Border_Right90" MouseLeave="onMouseLeave_Border_Right90" MouseLeftButtonDown="onMouseLeftButtonDown_Border_Right90"
+                                                Margin="10.0,0.0,20.0,15.0" Background="Gainsboro" BorderThickness="0.0" CornerRadius="5.0">
+                                            <TextBlock Text="오른쪽으로 90&#x00B0; 돌리기" FontSize="16.0" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                                        </Border>
+                                        <Border x:Name="Border_InitTransform" Grid.Row="4" MouseEnter="onMouseEnter_Border_InitTransform" MouseLeave="onMouseLeave_Border_InitTransform" MouseLeftButtonDown="onMouseLeftButtonDown_Border_InitTransform"
+                                                Grid.Column="0" Grid.ColumnSpan="2" Margin="120.0,0.0,120.0,15.0" Background="Gainsboro" BorderThickness="0.0" CornerRadius="5.0">
+                                            <TextBlock Text="기본값으로 초기화하기" FontSize="16.0" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                                <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="25.0,0.0,25.0,25.0" Background="White" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0">
+                                    <ScrollViewer>
+                                        <ListBox x:Name="ListBox_EquippedPatternList" KeyDown="onKeyDown_ListBox_EquippedPatternList" Background="Transparent" BorderThickness="0.0" FontSize="20.0" FontWeight="SemiBold" >
+                                        </ListBox>
+                                    </ScrollViewer>
+                                </Border>
+
+                            </Grid>
+                        </Grid>
+                        <Border Grid.Row="0" Width="250.0" Height="50.0" Margin="0.0,30.0,30.0,0.0" Background="FloralWhite" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0"
+                                HorizontalAlignment="Right" VerticalAlignment="Top">
+                            <TextBox x:Name="TextBox_PrefabName" Margin="5.0" Background="Transparent" BorderThickness="0.0" FontSize="20" FontWeight="Bold"
+                                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        </Border>
+                        <DockPanel Grid.Row="0" LastChildFill="False">
+                            <StackPanel DockPanel.Dock="Top" Height="150.0" Margin="0.0,5.0,0.0,5.0" Orientation="Horizontal">
+                                <Border x:Name="Border_AddPrefabFile" MouseEnter="onMouseEnter_Border_AddPrefabFile" MouseLeave="onMouseLeave_Border_AddPrefabFile" MouseLeftButtonDown="onMouseLeftButtonDown_Border_AddPrefabFile" MouseLeftButtonUp="onMouseLeftButtonUp_Border_AddPrefabFile" Cursor="Hand"
+                                        Width="120.0" Height="120.0" Margin="25.0,0.0,0.0,0.0" Background="White" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0"
+                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <Border x:Name="Border_SavePrefabFile" MouseEnter="onMouseEnter_Border_SavePrefabFile" MouseLeave="onMouseLeave_Border_SavePrefabFile" MouseLeftButtonDown="onMouseLeftButtonDown_Border_SavePrefabFile" MouseLeftButtonUp="onMouseLeftButtonUp_Border_SavePrefabFile" Cursor="Hand"
+                                        Width="120.0" Height="120.0" Margin="25.0,0.0,0.0,0.0" Background="White" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0"
+                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </DockPanel>
+                        <Border Grid.Row="1" Background="Transparent" BorderBrush="DarkGray" BorderThickness="0.0,1.0,0.0,0.0">
+                            <Border Margin="0.0,2.0,0.0,0.0" Background="#FF84C184" BorderBrush="DarkGray" BorderThickness="0.0,1.0,0.0,0.0">
+                                <TabControl x:Name="TabControl_PrefabEditor_ResourceList" BorderThickness="0.0">
+                                    <TabItem Header="  프리팹  ">
+                                        <ScrollViewer Grid.Row="1" Background="#FFE2F0DB">
+                                            <WrapPanel x:Name="WrapPanel_PrefabEditor_PrefabList" Grid.Row="1" Loaded="onLoaded_WrapPanel_PrefabEditor_PrefabList" Margin="0.0,15.0,0.0,0.0"/>
+                                        </ScrollViewer>
+                                    </TabItem>
+                                    <TabItem Header="  이미지  ">
+                                        <ScrollViewer Grid.Row="1" Background="#FFE2F0DB">
+                                            <WrapPanel x:Name="WrapPanel_PrefabEditor_ImageList" Grid.Row="1" Loaded="onLoaded_WrapPanel_PrefabEditor_ImageList" Margin="0.0,15.0,0.0,0.0"/>
+                                        </ScrollViewer>
+                                    </TabItem>
+                                    <TabItem Header=" 행동 규칙 ">
+                                        <ScrollViewer Grid.Row="1" Background="#FFE2F0DB">
+                                            <WrapPanel x:Name="WrapPanel_PrefabEditor_PatternList" Grid.Row="1" Loaded="onLoaded_WrapPanel_PrefabEditor_PatternList" Margin="0.0,15.0,0.0,0.0"/>
+                                        </ScrollViewer>
+                                    </TabItem>
+                                </TabControl>
+                               
+                            </Border>
+                        </Border>
+                    </Grid>
+                </Border>
+            </TabItem>
+            <TabItem Header="행동 규칙 편집기">
+                <Border BorderBrush="DarkGray" BorderThickness="1.0">
+                    <Grid Background="LightYellow" ShowGridLines="False">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2.0*"/>
+                            <RowDefinition Height="1.5*"/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" Width="250.0" Height="50.0" Margin="0.0,30.0,30.0,0.0" Background="FloralWhite" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0"
+                                HorizontalAlignment="Right" VerticalAlignment="Top">
+                            <TextBox x:Name="TextBox_PatternName" Margin="5.0" Background="Transparent" BorderThickness="0.0" FontSize="20" FontWeight="Bold"
+                                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        </Border>
+                        <DockPanel Grid.Row="0" LastChildFill="True">
+                            <StackPanel DockPanel.Dock="Top" Height="150.0" Margin="0.0,5.0,0.0,5.0" Orientation="Horizontal">
+                                <Border x:Name="Border_AddPatternFile" MouseEnter="onMouseEnter_Border_AddPatternFile" MouseLeave="onMouseLeave_Border_AddPatternFile" MouseLeftButtonDown="onMouseLeftButtonDown_Border_AddPatternFile" MouseLeftButtonUp="onMouseLeftButtonUp_Border_AddPatternFile" Cursor="Hand"
+                                    Width="120.0" Height="120.0" Margin="25.0,0.0,0.0,0.0" Background="White" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0"
+                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <Border x:Name="Border_SavePatternFile" MouseEnter="onMouseEnter_Border_SavePatternFile" MouseLeave="onMouseLeave_Border_SavePatternFile" MouseLeftButtonDown="onMouseLeftButtonDown_Border_SavePatternFile" MouseLeftButtonUp="onMouseLeftButtonUp_Border_SavePatternFile" Cursor="Hand"
+                                    Width="120.0" Height="120.0" Margin="25.0,0.0,0.0,0.0" Background="White" BorderBrush="Black" BorderThickness="4.0" CornerRadius="5.0"
+                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <ScrollViewer DockPanel.Dock="Bottom" Background="LightYellow" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden">
+                                <StackPanel x:Name="StackPanel_PatternEditor" Margin="100.0,0.0,75.0,0.0" Background="Transparent" HorizontalAlignment="Center" Orientation="Horizontal"/>
+                            </ScrollViewer>
+                        </DockPanel>
+                        <Border Grid.Row="1" BorderBrush="DarkGray" BorderThickness="0.0,1.0,0.0,0.0">
+                            <Border Margin="0.0,2.0,0.0,0.0" BorderBrush="DarkGray" BorderThickness="0.0,1.0,0.0,0.0">
+                                <ScrollViewer Grid.Row="1" Background="GhostWhite">
+                                    <WrapPanel x:Name="WrapPanel_PatternEditor_PatternList" Grid.Row="1" Loaded="onLoaded_WrapPanel_PatternEditor_PatternList" Margin="0.0,25.0,0.0,0.0"/>
+                                </ScrollViewer>
+                            </Border>
+                        </Border>
+                    </Grid>
+                </Border>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

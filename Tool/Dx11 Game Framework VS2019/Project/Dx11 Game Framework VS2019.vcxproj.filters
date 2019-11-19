@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="99 Utility">
+      <UniqueIdentifier>{faae744c-41bd-44e5-bd6c-3feda837024d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00 Entry Point">
+      <UniqueIdentifier>{437f47a6-45ce-4750-9877-4900028c6584}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99 Utility\Reference Management">
+      <UniqueIdentifier>{42faacda-6157-4585-899c-5f221955ff2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99 Utility\Error Logger">
+      <UniqueIdentifier>{2e43fa8e-3e5e-4f0a-962a-709d1229396b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99 Utility\String Converter">
+      <UniqueIdentifier>{8fd78326-044e-4921-86e6-60562b64a6ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 System">
+      <UniqueIdentifier>{c79bd56b-5ee4-443d-85ed-ecc723da984c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game">
+      <UniqueIdentifier>{624bb6a0-82fb-4592-b01f-fda0332d8bfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Application">
+      <UniqueIdentifier>{71309d97-17b3-46d8-bcd4-19b9b632c846}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 System\Application">
+      <UniqueIdentifier>{0fa674fe-4b87-4ac8-9f9a-7c5fc07dd079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 System\Graphics">
+      <UniqueIdentifier>{54e6df9a-8f69-40f3-8ee2-8e44438a677a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 System\Windows">
+      <UniqueIdentifier>{e204b10b-9054-4931-96cb-c832cb2bda83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99 Utility\pch">
+      <UniqueIdentifier>{e8892802-3ced-42c3-a0fe-c48ffca36029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 System\Graphics\Adapter Reader">
+      <UniqueIdentifier>{d1937973-5eb0-4890-bff4-ed6efd839dc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Component">
+      <UniqueIdentifier>{76a7472b-c9b4-4814-a74d-4fad6327d03c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Game Object">
+      <UniqueIdentifier>{f89e8a80-ff6b-4195-bcc4-b00c6fb30389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Game Object\Actor">
+      <UniqueIdentifier>{e85aa1b8-df10-4531-b364-8e27d0881796}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Utility">
+      <UniqueIdentifier>{e592ea89-84fd-441a-884d-8fc150ed8e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Game Object\Actor\Factory">
+      <UniqueIdentifier>{e24ac59e-0792-436e-8e4b-857ac6e2ff6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Game Object\Camera">
+      <UniqueIdentifier>{626aad18-9d00-4eea-a319-28e8d901412a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Game Object\Camera\Factory">
+      <UniqueIdentifier>{424126d7-6b5f-46a2-aa85-81d99979d348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Component\Components">
+      <UniqueIdentifier>{4ec23e37-8c9b-4d15-bec6-323e7954871c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Resource">
+      <UniqueIdentifier>{b2d5c240-2baf-4cb3-8c75-01ee01097b80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Resource\Factory">
+      <UniqueIdentifier>{5dba8c2c-e861-4f71-8875-3ddbfd7ec992}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Resource\Resources">
+      <UniqueIdentifier>{b6fee083-d9e0-4ee1-8a0e-cd4609ccca7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 System\Graphics\Buffer">
+      <UniqueIdentifier>{1e0e2cff-74ce-4f74-bc2c-45a770630886}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 System\Graphics\Buffer\VertexBuffer">
+      <UniqueIdentifier>{e075da41-3556-452a-8b3e-5a012da979fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 System\Graphics\Buffer\IndexBuffer">
+      <UniqueIdentifier>{0a6b508a-d268-457e-80f2-a0cad81713ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 System\Graphics\Buffer\CostantBuffer">
+      <UniqueIdentifier>{2fab3e26-7009-4e05-b1a0-455cfd67e3ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Resource\Resources\Buffer">
+      <UniqueIdentifier>{20d0d2f5-5fd9-4d53-89b4-ed053e010e5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Resource\Resources\Texture">
+      <UniqueIdentifier>{e3903fe6-f0c4-4728-b80f-7886e9b1defd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Resource\Resources\Shader">
+      <UniqueIdentifier>{6f9bcc4b-3516-404b-be19-6870d989e8c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Resource\Resources\Shader\VertexShader">
+      <UniqueIdentifier>{f9afd0fc-df91-4e68-a8a8-a97c87b76ed9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Resource\Resources\Shader\PixelShader">
+      <UniqueIdentifier>{49898151-90a4-4bff-8ef5-ef040bc68957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Component\Components\Transform">
+      <UniqueIdentifier>{ad0c89ff-79d0-46f4-b0a0-0281a399903c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Component\Components\Renderer">
+      <UniqueIdentifier>{5b82e76b-f321-4855-947e-436d4996754a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Game Object\Management">
+      <UniqueIdentifier>{abc71384-414a-4c70-938e-b8a1cfe2bd54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98 System\Utility">
+      <UniqueIdentifier>{53a784dc-4f39-4282-9187-37f892147359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Component\Components\CamComponent">
+      <UniqueIdentifier>{e1996121-32fe-4530-abcd-1390faf78ae2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Shader HLSL">
+      <UniqueIdentifier>{91b34c1d-b966-4a50-855a-246cc8958516}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Management">
+      <UniqueIdentifier>{1d5b05b8-1055-46e3-8667-7aa47a586028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Component\Components\ColorEffect">
+      <UniqueIdentifier>{c1c81497-8395-47e6-b6b5-da5b64c40c99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Component\Factory">
+      <UniqueIdentifier>{187d8dd4-bc3b-4871-9003-9d45a47308fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Game\Component\Components\Pattern">
+      <UniqueIdentifier>{eb46aae4-f094-42c4-8bf0-93c938e4d49e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Source\EntryPoint.cpp">
+      <Filter>00 Entry Point</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\stdafx.cpp">
+      <Filter>99 Utility\pch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\StringConverter.cpp">
+      <Filter>99 Utility\String Converter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\ErrorLogger.cpp">
+      <Filter>99 Utility\Error Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Base.cpp">
+      <Filter>99 Utility\Reference Management</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Application.cpp">
+      <Filter>98 System\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\GraphicDevice.cpp">
+      <Filter>98 System\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\AdapterReader.cpp">
+      <Filter>98 System\Graphics\Adapter Reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\RenderWindow.cpp">
+      <Filter>98 System\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Game.cpp">
+      <Filter>01 Game\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Component.cpp">
+      <Filter>01 Game\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Actor.cpp">
+      <Filter>01 Game\Game Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\GameObject.cpp">
+      <Filter>01 Game\Game Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\ComponentFactory.cpp">
+      <Filter>01 Game\Component\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Resource.cpp">
+      <Filter>01 Game\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\ResourceFactory.cpp">
+      <Filter>01 Game\Resource\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\IndexBuffer.cpp">
+      <Filter>98 System\Graphics\Buffer\IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\RectBuffer.cpp">
+      <Filter>01 Game\Resource\Resources\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Texture.cpp">
+      <Filter>01 Game\Resource\Resources\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Transform.cpp">
+      <Filter>01 Game\Component\Components\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Shader.cpp">
+      <Filter>01 Game\Resource\Resources\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\VertexShader.cpp">
+      <Filter>01 Game\Resource\Resources\Shader\VertexShader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\PixelShader.cpp">
+      <Filter>01 Game\Resource\Resources\Shader\PixelShader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Renderer.cpp">
+      <Filter>01 Game\Component\Components\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\RenderManager.cpp">
+      <Filter>01 Game\Game Object\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\ActorManager.cpp">
+      <Filter>01 Game\Game Object\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CameraManager.cpp">
+      <Filter>01 Game\Game Object\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CamComponent.cpp">
+      <Filter>01 Game\Component\Components\CamComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Camera.cpp">
+      <Filter>01 Game\Game Object\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\InputManager.cpp">
+      <Filter>01 Game\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\PickingManager.cpp">
+      <Filter>01 Game\Game Object\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\GridBuffer.cpp">
+      <Filter>01 Game\Resource\Resources\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\ColorEffect.cpp">
+      <Filter>01 Game\Component\Components\ColorEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\PrefabManager.cpp">
+      <Filter>01 Game\Game Object\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Pattern.cpp">
+      <Filter>01 Game\Component\Components\Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\PatternManager.cpp">
+      <Filter>01 Game\Management</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Source\stdafx.h">
+      <Filter>99 Utility\pch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\StringConverter.h">
+      <Filter>99 Utility\String Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\ErrorLogger.h">
+      <Filter>99 Utility\Error Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Base.h">
+      <Filter>99 Utility\Reference Management</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\FrameworkUtility.h">
+      <Filter>99 Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Application.h">
+      <Filter>98 System\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\GraphicDevice.h">
+      <Filter>98 System\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\AdapterReader.h">
+      <Filter>98 System\Graphics\Adapter Reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\RenderWindow.h">
+      <Filter>98 System\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Game.h">
+      <Filter>01 Game\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Component.h">
+      <Filter>01 Game\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Actor.h">
+      <Filter>01 Game\Game Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\GameObject.h">
+      <Filter>01 Game\Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\ComponentFactory.h">
+      <Filter>01 Game\Component\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Components.h">
+      <Filter>01 Game\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Resource.h">
+      <Filter>01 Game\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Resources.h">
+      <Filter>01 Game\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\ResourceFactory.h">
+      <Filter>01 Game\Resource\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\VertexBuffer.h">
+      <Filter>98 System\Graphics\Buffer\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\IndexBuffer.h">
+      <Filter>98 System\Graphics\Buffer\IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\ConstantBuffer.h">
+      <Filter>98 System\Graphics\Buffer\CostantBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\RectBuffer.h">
+      <Filter>01 Game\Resource\Resources\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Texture.h">
+      <Filter>01 Game\Resource\Resources\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Transform.h">
+      <Filter>01 Game\Component\Components\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Shader.h">
+      <Filter>01 Game\Resource\Resources\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\VertexShader.h">
+      <Filter>01 Game\Resource\Resources\Shader\VertexShader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\PixelShader.h">
+      <Filter>01 Game\Resource\Resources\Shader\PixelShader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Renderer.h">
+      <Filter>01 Game\Component\Components\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\RenderManager.h">
+      <Filter>01 Game\Game Object\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\ActorManager.h">
+      <Filter>01 Game\Game Object\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\CameraManager.h">
+      <Filter>01 Game\Game Object\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BufferTypes.h">
+      <Filter>98 System\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\CamComponent.h">
+      <Filter>01 Game\Component\Components\CamComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Camera.h">
+      <Filter>01 Game\Game Object\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Singletons.h">
+      <Filter>01 Game\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\InputManager.h">
+      <Filter>01 Game\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\PickingManager.h">
+      <Filter>01 Game\Game Object\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\GridBuffer.h">
+      <Filter>01 Game\Resource\Resources\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\ColorEffect.h">
+      <Filter>01 Game\Component\Components\ColorEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\PrefabManager.h">
+      <Filter>01 Game\Game Object\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Structures.h">
+      <Filter>01 Game\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Pattern.h">
+      <Filter>01 Game\Component\Components\Pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\PatternManager.h">
+      <Filter>01 Game\Management</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\CheckList.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Source\VS_Default.hlsl">
+      <Filter>01 Game\Shader HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Source\PS_Default.hlsl">
+      <Filter>01 Game\Shader HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Source\VS_Grid.hlsl">
+      <Filter>01 Game\Shader HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Source\PS_Grid.hlsl">
+      <Filter>01 Game\Shader HLSL</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

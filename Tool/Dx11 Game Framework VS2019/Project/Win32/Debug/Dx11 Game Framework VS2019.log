@@ -1,0 +1,41 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Win32\Debug\) contains files shared from another project (Game Tool Framework.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Actor.cpp
+  ActorManager.cpp
+  Pattern.cpp
+C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Source\Pattern.cpp(26,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  VertexShader.cpp
+  코드를 생성하고 있습니다...
+C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Source\Pattern.cpp(29,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  PatternManager.cpp
+     C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\GameFramework.lib 라이브러리 및 C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\GameFramework.exp 개체를 생성하고 있습니다.
+  Dx11 Game Framework VS2019.vcxproj -> C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\GameFramework.dll
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Fonts\comic_sans_ms_16.spritefont
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Shaders\.gitignore
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Shaders\PS_Default.cso
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Shaders\PS_Grid.cso
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Shaders\VS_Default.cso
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Shaders\VS_Grid.cso
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Textures\niniz.png
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Textures\slime_green.png
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Textures\Test00.png
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Textures\Test01.png
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Textures\Test02.png
+  11개 파일이 복사되었습니다.
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Fonts\comic_sans_ms_16.spritefont
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Shaders\.gitignore
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Shaders\PS_Default.cso
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Shaders\PS_Grid.cso
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Shaders\VS_Default.cso
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Shaders\VS_Grid.cso
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Textures\niniz.png
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Textures\slime_green.png
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Textures\Test00.png
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Textures\Test01.png
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\Resources\Textures\Test02.png
+  11개 파일이 복사되었습니다.
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\GameFramework.dll
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\GameFramework.exp
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\GameFramework.ilk
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\GameFramework.lib
+  C:\Users\usert\Desktop\191118 (2)\Tool\Dx11 Game Framework VS2019\Bin\Win32\Debug\GameFramework.pdb
+          5개 파일이 복사되었습니다.
