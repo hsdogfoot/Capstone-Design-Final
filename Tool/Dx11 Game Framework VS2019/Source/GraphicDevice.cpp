@@ -33,6 +33,7 @@ void GraphicDevice::Render() const
 	DeviceContext->OMSetDepthStencilState(mDepthStencilState, 0);
 	DeviceContext->PSSetSamplers(0, 1, &mSamplerState);
 
+	// 객체 배치용 격자를 출력합니다.
 	RenderManager::GetInstance()->RenderGrid();
 	
 	RenderManager::GetInstance()->Render();

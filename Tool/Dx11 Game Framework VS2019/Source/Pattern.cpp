@@ -28,7 +28,7 @@ uint8_t Pattern::Update()
 		bool bResult = true;
 		for (int j = 0; j < PatternManager::mPatterns[i].first.size(); ++j)
 		{
-			//if (!PatternManager::mIfStatements[PatternManager::mPatterns[i].first[j]](static_cast<Actor*>(Owner), PatternManager::mParams[i].first[j]))
+			if (!PatternManager::mIfStatements[PatternManager::mPatterns[i].first[j]](static_cast<Actor*>(Owner), PatternManager::mParams[i].first[j]))
 			{
 				bResult = false;
 				break;

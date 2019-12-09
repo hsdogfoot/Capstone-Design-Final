@@ -28,6 +28,7 @@ namespace Tool.GamePreviewWindow
 
         protected override HandleRef BuildWindowCore(HandleRef hwndParent)
         {
+            // 핸들 정보들을 게임 프레임워크로 전달하고 게임을 생성합니다.
             IntPtr hInstance = Marshal.GetHINSTANCE(System.Reflection.Assembly.GetExecutingAssembly().GetModules()[0]);
             if (!CreateGame(hInstance, hwndParent.Handle, WindowWidth, WindowHeight))
             {

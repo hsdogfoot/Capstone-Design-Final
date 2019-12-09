@@ -10,6 +10,7 @@ extern "C" __declspec(dllexport) void PrintMessage(LPCTSTR message)
 	MessageBox(nullptr, message, L"Message from Game Framework", MB_OK);
 }
 
+// 게임을 생성하고 초기화합니다.
 extern "C" __declspec(dllexport) bool CreateGame(HINSTANCE hInstance, HWND parentHandle, int windowWidth, int windowHeight)
 {
 	if (!Game::Create(hInstance, parentHandle, "Game Preview", "Game Preview", windowWidth, windowHeight, &g_instance))
@@ -28,6 +29,7 @@ extern "C" __declspec(dllexport) bool CreateGame(HINSTANCE hInstance, HWND paren
 	return true;
 }
 
+// 게임의 메인 루프입니다.
 extern "C" __declspec(dllexport) void UpdateGame()
 {
 	Assert(g_instance != nullptr);
@@ -35,6 +37,7 @@ extern "C" __declspec(dllexport) void UpdateGame()
 	g_instance->Update();
 }
 
+// 게임 화면을 출력합니다.
 extern "C" __declspec(dllexport) void RenderGame()
 {
 	Assert(g_instance != nullptr);

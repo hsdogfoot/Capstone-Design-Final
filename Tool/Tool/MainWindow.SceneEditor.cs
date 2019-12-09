@@ -20,6 +20,7 @@ namespace Tool
 
         private void initialize_SceneEditor()
         {
+            // 쓰레드를 하나 생성합니다.
             mDispatcherTimer = new DispatcherTimer();
             mDispatcherTimer.Tick += new EventHandler(runGame);
             mDispatcherTimer.Interval = TimeSpan.FromMilliseconds(1);
@@ -238,9 +239,11 @@ namespace Tool
 
             mbGameLoaded = true;
 
+            // 윈도우 핸들 전달, 상속을 위해 핸들호스트를 생성합니다.
             mHwndHost = new GamePreviewHwndHost((int)Border_GamePreview.ActualWidth, (int)Border_GamePreview.ActualHeight);
             Border_GamePreview.Child = mHwndHost;
 
+            // 쓰레드를 시작합니다. (Update & Render)
             mDispatcherTimer.Start();
         }
 
@@ -271,6 +274,7 @@ namespace Tool
             preview.Show();
         }
 
+        // 게임 프레임워크로부터 진입점을 설정합니다.
         [DllImport("GameFramework.dll", EntryPoint = "RegisterPrefab", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         private static extern void RegisterPrefab([MarshalAs(UnmanagedType.LPWStr)] string path, [MarshalAs(UnmanagedType.LPWStr)] string name);
 

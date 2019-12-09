@@ -373,40 +373,6 @@ bool Game::initialize(HINSTANCE hInstance, HWND parentHandle, std::string window
 		return false;
 	}
 
-	Actor* actor = nullptr;
-
-	//actor = Actor::Create();
-	//if (!actor->EquipComponent<Transform>(L"Transform", XMFLOAT2(2.0f, 2.0f), XMFLOAT2(0.0f, 0.0f), XMFLOAT2(0.0f, 0.0f)))
-	//{
-	//	return false;
-	//}
-
-	//if (!actor->EquipComponent<Renderer>(L"Renderer", mGraphicDevice->Device, mGraphicDevice->DeviceContext, L"VS_Default", L"PS_Default", L"Resources\\Textures\\Test02.png"))
-	//{
-	//	return false;
-	//}
-
-	//if (!actor->EquipComponent<ColorEffect>(L"ColorEffect", mGraphicDevice->Device, mGraphicDevice->DeviceContext))
-	//{
-	//	return false;
-	//}
-
-	//std::vector<int> patternIDs;
-	//patternIDs.push_back(0);
-	//if (!actor->EquipComponent<Pattern>(L"Pattern", patternIDs))
-	//{
-	//	return false;
-	//}
-	//ActorManager::GetInstance()->RegisterActor(actor);
-
-	//AnimationData data;
-	//PrefabManager::GetInstance()->RegisterPrefab(L"Angmond", XMFLOAT2(2.0f, 3.0f), L"Texture", data);
-	//PrefabManager::GetInstance()->SetupPrefab(L"Angmond");
-
-	//PatternManager::GetInstance()->Initialize();
-
-	//LoadData();
-
 	return true;
 }
 

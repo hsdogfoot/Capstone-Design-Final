@@ -19,6 +19,7 @@ namespace Tool
         private EAdderMode mAdderMode = EAdderMode.CreateNew;
         private int mTargetNodeIndex = 0;
 
+        // 행동 규칙 편집기를 초기화합니다.
         private void initialize_PatternEditor()
         {
             StatementManager.Initialize();
@@ -26,6 +27,7 @@ namespace Tool
 
             double iconSize = 0.75;
 
+            // "새로 만들기" 버튼 생성
             Image image_addFile = new Image();
             image_addFile.Source = new BitmapImage(new Uri($"{Environment.CurrentDirectory}\\Resources\\Icons\\AddFile.png"));
             image_addFile.Width = Border_AddPatternFile.Width * iconSize;
@@ -33,6 +35,7 @@ namespace Tool
 
             Border_AddPatternFile.Child = image_addFile;
 
+            // "저장하기" 버튼 생성
             Image image_saveFile = new Image();
             image_saveFile.Source = new BitmapImage(new Uri($"{Environment.CurrentDirectory}\\Resources\\Icons\\SaveFile.png"));
             image_saveFile.Width = Border_SavePatternFile.Width * iconSize;
@@ -41,6 +44,7 @@ namespace Tool
             Border_SavePatternFile.Child = image_saveFile;
         }
 
+        // 행동 규칙 목록을 갱신합니다.
         private void refresh_WrapPanel_PatternEditor_PatternList()
         {
             WrapPanel_PatternEditor_PatternList.Children.Clear();
@@ -52,6 +56,7 @@ namespace Tool
                 return;
             }
 
+            // Patterns 디렉토리에서 .pat 파일들을 읽어들입니다.
             string[] filePaths = Directory.GetFiles(directory);
             foreach (string path in filePaths)
             {
@@ -108,8 +113,10 @@ namespace Tool
                         }
                     }
 
+                    // 수집한 정보들을 토대로 PatternData 클래스를 만듭니다.
                     PatternData data = new PatternData(fileName, path, conditions, behaviour.GetValueOrDefault());
 
+                    // 이를 이용해 Grid 객체를 생성하고 목록에 추가합니다.
                     Grid_PatternFile patternFile = new Grid_PatternFile(data);
                     patternFile.MouseLeftButtonDown += onMouseLeftButtonDown_PatternEditor_Grid_PatternFile;
                     patternFile.Grid_XButton.MouseLeftButtonUp += onMouseLeftButtonUp_Grid_XButton_PatternFile;
@@ -123,6 +130,7 @@ namespace Tool
             }
         }
 
+        // 작업중인 행동 규칙 화면을 갱신합니다. (블록 코딩 부분)
         private void refresh_StackPanel_PatternEditor()
         {
             Debug.Assert(mLoadedPatternData != null);
@@ -130,6 +138,7 @@ namespace Tool
             StackPanel_PatternEditor.Children.Clear();
             TextBox_PatternName.Text = mLoadedPatternData.Name;
 
+            // 로드할 패턴의 조건 블록들을 차례로 생성해 목록에 추가합니다. (Linked List 로 되어있음)
             int nodeCount = 0;
             Grid_StatementBlock block;
             LinkedListNode<KeyValuePair<int, string>> node = mLoadedPatternData.Conditions.First;
@@ -144,6 +153,7 @@ namespace Tool
                 node = node.Next;
             }
 
+            // 로드할 패턴의 동작 블록을 생성해 목록에 추가합니다.
             block = new Grid_StatementBlock(EBlockType.Behaviour, mLoadedPatternData.Behaviour.Key, mLoadedPatternData.Behaviour.Value, nodeCount);
             block.Path_Adder.MouseLeftButtonUp += onMouseLeftButtonUp_Path_Adder;
             block.Grid_XButton.MouseLeftButtonUp += onMouseLeftButtonUp_Grid_XButton_Behaviour;
@@ -151,6 +161,7 @@ namespace Tool
             StackPanel_PatternEditor.Children.Add(block);
         }
 
+        // 작성한 내용을 .pat 형식으로 저장합니다.
         private void save_PatternFile()
         {
             if (mLoadedPatternData == null)
